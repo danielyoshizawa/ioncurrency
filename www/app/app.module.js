@@ -1,3 +1,1 @@
-/**
- * Created by daniel on 2/25/16.
- */
+angular.module('ioncurrency', ['ionic', 'starter.controllers', 'starter.services']);
