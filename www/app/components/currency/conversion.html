@@ -8,9 +8,13 @@
           From
         </div>
         <select>
-          <option>Opt1</option>
-          <option>Opt2</option>
-          <option>Opt3</option>
+          <option
+            ng-repeat="(key,value) in currencies"
+            ng-selected="key == 'USD'"
+            value="key"
+          >
+            {{key + ', ' + value}}
+          </option>
         </select>
       </label>
 
@@ -23,9 +27,12 @@
           To
         </div>
         <select>
-          <option>Opt1</option>
-          <option>Opt2</option>
-          <option>Opt3</option>
+          <option
+            ng-repeat="(key,value) in currencies"
+            value="key"
+          >
+            {{key + ', ' + value}}
+          </option>
         </select>
       </label>
 
@@ -33,6 +40,5 @@
         Convert
       </button>
     </div>
-  {{feed}}
   </ion-content>
 </ion-view>

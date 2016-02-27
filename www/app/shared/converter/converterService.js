@@ -15,7 +15,6 @@ angular.module('ioncurrency.services')
       }).then(function successCallback(response) {
         converter.query = response.data;
         rootScope.$emit('loadData');
-
       }, function errorCallback(response) {
         window.alert("Not able to get currency list from server.");
       });
