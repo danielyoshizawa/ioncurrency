@@ -1,2 +1,3 @@
-angular.module('ioncurrency', ['ionic', 'ioncurrency.controllers']);//, 'ioncurrency.services']);
-angular.module('ioncurrency.controllers', []);
+angular.module('ioncurrency', ['ionic', 'ioncurrency.controllers', 'ioncurrency.services']);
+angular.module('ioncurrency.controllers', ['ioncurrency.services']);
+angular.module('ioncurrency.services', []);
