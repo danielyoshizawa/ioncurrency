@@ -1,6 +1,6 @@
 angular.module('ioncurrency')
 
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
 
