@@ -29,12 +29,12 @@ angular.module('ioncurrency')
           }
         }
       })
-      .state('tab.chat-detail', {
-        url: '/chats/:chatId',
+      .state('tab.detail', {
+        url: '/history/:conversionId',
         views: {
-          'tab-chats': {
-            templateUrl: 'templates/chat-detail.html',
-            controller: 'ChatDetailCtrl'
+          'tab-history': {
+            templateUrl: 'app/components/details/details.html',
+            controller: 'DetailsCtrl'
           }
         }
       })
