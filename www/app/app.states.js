@@ -10,12 +10,12 @@ angular.module('ioncurrency')
         templateUrl: 'app/components/main/tabs.html'
       })
 
-      .state('tab.dash', {
-        url: '/dash',
+      .state('tab.conversion', {
+        url: '/conversion',
         views: {
-          'tab-dash': {
-            templateUrl: 'templates/tab-dash.html',
-            controller: 'DashCtrl'
+          'tab-conversion': {
+            templateUrl: 'app/components/currency/conversion.html',
+            controller: 'ConversionCtrl'
           }
         }
       })
@@ -49,6 +49,6 @@ angular.module('ioncurrency')
         }
       });
 
-    $urlRouterProvider.otherwise('/tab/dash');
+    $urlRouterProvider.otherwise('/tab/conversion');
 
   });
