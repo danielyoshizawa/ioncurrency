@@ -20,12 +20,12 @@ angular.module('ioncurrency')
         }
       })
 
-      .state('tab.chats', {
-        url: '/chats',
+      .state('tab.history', {
+        url: '/history',
         views: {
-          'tab-chats': {
-            templateUrl: 'templates/tab-chats.html',
-            controller: 'ChatsCtrl'
+          'tab-history': {
+            templateUrl: 'app/components/history/timeline.html',
+            controller: 'TimelineCtrl'
           }
         }
       })
