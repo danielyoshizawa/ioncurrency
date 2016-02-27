@@ -1,5 +1,5 @@
 angular.module('ioncurrency.controllers')
 
-.controller('ConversionCtrl', function() {
+  .controller('ConversionCtrl', function() {
 
 });
