@@ -6,7 +6,11 @@ angular.module('ioncurrency.services')
 
     manager.addConversion = function (conversion) {
       conversion.id = manager.conversions.length;
-      manager.conversions.append(conversion);
+      manager.conversions.push(conversion);
+    }
+
+    manager.getConversions = function () {
+      return manager.conversions;
     }
 
   }]);

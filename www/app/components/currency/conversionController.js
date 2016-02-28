@@ -14,11 +14,13 @@ angular.module('ioncurrency.controllers')
 
       scope.convert = function (conversion) {
         scope.amountConverted = converterService.getConversionValue(conversion);
+        conversion.amountConverted = scope.amountConverted;
+        manager.addConversion(conversion);
       };
 
       scope.doRefresh = function () {
         converterService.loadData();
         scope.$apply();
-      }
+      };
 
     }]);
