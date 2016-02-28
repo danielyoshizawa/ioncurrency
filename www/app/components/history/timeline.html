@@ -1,14 +1,22 @@
 <ion-view view-title="History">
   <ion-content class="padding-top">
-    <p>Histoy</p>
-    <a href="#/tab/history/:1">Details</a>
-
     <ion-list>
-      <ion-item ng-repeat="conversion in conversions">
-        Item : {{conversion.id}}
-        <a href="#/tab/history/:{{conversion.id}}">Details</a>
+      <ion-item ng-repeat="conversion in conversions" href="#/tab/history/:{{conversion.id}}">
+        <div class="row">
+          <div class="col">From : </div>
+          <div class="col">{{conversion.from}}</div>
+          <div class="col">To :</div>
+          <div class="col">{{conversion.to}}</div>
+        </div>
+        <div class="row">
+          <div class="col">Amount : </div>
+          <div class="col">{{conversion.amount | currency : conversion.from + "$ "}}</div>
+        </div>
+        <div class="row">
+          <div class="col">Converted : </div>
+          <div class="col">{{conversion.amountConverted | currency : conversion.to + "$ "}}</div>
+        </div>
       </ion-item>
     </ion-list>
-
   </ion-content>
 </ion-view>
