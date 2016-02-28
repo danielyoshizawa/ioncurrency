@@ -1,7 +1,7 @@
 angular.module('ioncurrency.controllers')
 
-  .controller('ConversionCtrl', ['$scope', 'ConverterService', '$rootScope', 'Conversion', 'ConversionManager',
-    function (scope, converterService, rootScope, Conversion, manager) {
+  .controller('ConversionCtrl', ['$scope', 'ConverterService', '$rootScope', 'Conversion', 'ConversionManager', '$state', '$location',
+    function (scope, converterService, rootScope, Conversion, manager, state, location) {
 
       rootScope.$on('loadData', function () {
         scope.currencies = converterService.getListOfCurrencyNames();
@@ -13,9 +13,10 @@ angular.module('ioncurrency.controllers')
       });
 
       scope.convert = function (conversion) {
-        scope.amountConverted = converterService.getConversionValue(conversion);
-        conversion.amountConverted = scope.amountConverted;
+        conversion.amountConverted = converterService.getConversionValue(conversion);
         manager.addConversion(conversion);
+        state.go('tab.detail', {'conversionId': conversion.id});
+        location.search('conversionId', null);
       };
 
       scope.doRefresh = function () {

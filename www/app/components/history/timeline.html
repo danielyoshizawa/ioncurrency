@@ -1,7 +1,7 @@
 <ion-view view-title="History">
   <ion-content class="padding-top">
     <ion-list>
-      <ion-item ng-repeat="conversion in conversions" href="#/tab/history/:{{conversion.id}}">
+      <ion-item ng-repeat="conversion in conversions" href="#/tab/history/{{conversion.id}}">
         <div class="row">
           <div class="col">From : </div>
           <div class="col">{{conversion.from}}</div>

@@ -1,6 +1,20 @@
 <ion-view view-title="Details">
   <ion-content class="padding">
-    <p>Details</p>
-    {{id}}
+
+    <div class="row">
+      <div class="col">From : </div>
+      <div class="col">{{conversion.from}}</div>
+      <div class="col">To :</div>
+      <div class="col">{{conversion.to}}</div>
+    </div>
+    <div class="row">
+      <div class="col">Amount : </div>
+      <div class="col">{{conversion.amount | currency : conversion.from + "$ "}}</div>
+    </div>
+    <div class="row">
+      <div class="col">Converted : </div>
+      <div class="col">{{conversion.amountConverted | currency : conversion.to + "$ "}}</div>
+    </div>
+
   </ion-content>
 </ion-view>
