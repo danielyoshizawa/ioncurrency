@@ -1,44 +1,48 @@
 <ion-view view-title="Currency Conversion">
   <ion-content class="padding-top">
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
 
+    </ion-refresher>
     <div class="list">
 
       <label class="item item-input item-select">
         <div class="input-label">
           From
         </div>
-        <select>
+        <select ng-model="conversion.from">
           <option
             ng-repeat="(key,value) in currencies"
             ng-selected="key == 'USD'"
-            value="key"
+            value="{{key}}"
           >
-            {{key + ', ' + value}}
+            {{key}}
           </option>
         </select>
       </label>
 
       <label class="item item-input">
-        <input type="text" placeholder="Value">
+        <input type="text" placeholder="Value" ng-model="conversion.amount">
       </label>
 
       <label class="item item-input item-select">
         <div class="input-label">
           To
         </div>
-        <select>
+        <select ng-model="conversion.to">
           <option
             ng-repeat="(key,value) in currencies"
-            value="key"
+            value="{{key}}"
           >
-            {{key + ', ' + value}}
+            {{key}}
           </option>
         </select>
       </label>
 
-      <button class="button button-full button-positive">
+      <button class="button button-full button-positive" ng-click="convert(conversion)">
         Convert
       </button>
     </div>
+
+    {{amountConverted}}
   </ion-content>
 </ion-view>
