@@ -42,5 +42,18 @@
         Convert
       </button>
     </div>
+
+    <ion-list>
+      <ion-item ng-repeat="conversionDisplay in conversionList">
+        <div class="row">
+          <div class="col col-25">{{conversionDisplay.from}}</div>
+          <div class="col col-25">{{conversionDisplay.amount}}</div>
+          <div class="col col-25">{{conversionDisplay.to}}</div>
+          <div class="col col-25">{{conversionDisplay.amountConverted}}</div>
+        </div>
+
+      </ion-item>
+    </ion-list>
+
   </ion-content>
 </ion-view>

@@ -4,4 +4,5 @@ angular.module('ioncurrency.controllers')
     var id = stateParams.conversionId;
 
     scope.conversion = manager.getConversionAt(id);
+
   }]);
