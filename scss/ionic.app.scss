@@ -15,9 +15,20 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+$positive:                        #8FB339 !default;
+$button-positive-text:            #DADDD8 !default;
+$base-background-color:           #4B5842 !default;
+$base-color:                      #DADDD8 !default;
+
+$input-bg:                        #C7D59F !default;
+//$input-bg-disabled:               $stable !default;
+
+//$input-color:                     #111 !default;
+
+
 // The path for our ionicons font files, relative to the built CSS in www/css
-$ionicons-font-path: "../lib/ionic/fonts" !default;
+$ionicons-font-path: "../assets/lib/ionic/fonts" !default;
 
 // Include all of Ionic
-@import "www/lib/ionic/scss/ionic";
+@import "www/assets/lib/ionic/scss/ionic";
 
