@@ -18,8 +18,6 @@ angular.module('ioncurrency.controllers')
         if (!conversion.from)
           conversion.from = "USD";
 
-        scope.out = conversion.from;
-
         conversion.amountConverted = converterService.getConversionValue(conversion);
         manager.addConversion(conversion);
         scope.conversionList.unshift(angular.copy(conversion));

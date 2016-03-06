@@ -43,15 +43,11 @@
       </button>
     </div>
 
-    <div>Convert From {{out}}</div>
-
     <ion-list>
       <ion-item ng-repeat="conversionDisplay in conversionList">
         <div class="row">
-          <div class="col col-25">{{ conversionDisplay.from }}</div>
-          <div class="col col-25">{{ conversionDisplay.amount | currency : conversionDisplay.from + "$ " }}</div>
-          <div class="col col-25">{{ conversionDisplay.to }}</div>
-          <div class="col col-25">{{ conversionDisplay.amountConverted| currency : conversionDisplay.to + "$ " }}</div>
+          <div class="col">{{ conversionDisplay.amount | currency : conversionDisplay.from + "$ " }}</div>
+          <div class="col">{{ conversionDisplay.amountConverted| currency : conversionDisplay.to + "$ " }}</div>
         </div>
 
       </ion-item>
