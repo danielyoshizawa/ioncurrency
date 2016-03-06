@@ -21,7 +21,7 @@
       </label>
 
       <label class="item item-input">
-        <input type="text" placeholder="Value" ng-model="conversion.amount">
+        <input type="text" placeholder="Value" ng-model="conversion.amount" ui-money-mask="2">
       </label>
 
       <label class="item item-input item-select">
@@ -46,10 +46,10 @@
     <ion-list>
       <ion-item ng-repeat="conversionDisplay in conversionList">
         <div class="row">
-          <div class="col col-25">{{conversionDisplay.from}}</div>
-          <div class="col col-25">{{conversionDisplay.amount}}</div>
-          <div class="col col-25">{{conversionDisplay.to}}</div>
-          <div class="col col-25">{{conversionDisplay.amountConverted}}</div>
+          <div class="col col-25">{{ conversionDisplay.from }}</div>
+          <div class="col col-25">{{ conversionDisplay.amount | currency : conversionDisplay.from + "$ " }}</div>
+          <div class="col col-25">{{ conversionDisplay.to }}</div>
+          <div class="col col-25">{{ conversionDisplay.amountConverted| currency : conversionDisplay.to + "$ " }}</div>
         </div>
 
       </ion-item>
